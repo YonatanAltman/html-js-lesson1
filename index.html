@@ -1,0 +1,61 @@
+<html>
+<title>Lesson1 - html</title>
+
+<head>
+    <style>
+        .my-form {
+            outline: solid black 2px;
+            background-color: aquamarine;
+
+        }
+
+        .input {}
+    </style>
+</head>
+
+<body>
+    <h2>
+        Academka
+    </h2>
+    <div>
+        <h3>
+            This is my Form
+
+        </h3>
+        <form id="employee-form" onsubmit="go()" class="my-form">
+            <div>
+                First Name
+                <input class="input" id="fname" type="text">
+            </div>
+            <div>
+                Last Name
+                <input class="input" id="lname" type="text">
+            </div>
+            <div>
+                Age
+                <input class="input" id="age" type="number">
+            </div>
+            <button>Submit</button>
+        </form>
+    </div>
+    <script>
+        document.getElementById("employee-form").addEventListener("submit", function (event) {
+
+            event.preventDefault()
+
+        });
+        function go() {
+            console.group('FORM')
+            var from = {};
+            from.fname = document.getElementById('fname').value;
+            from.lname = document.getElementById('lname').value;
+            from.age = document.getElementById('age').value;
+            console.log(from);
+
+            console.groupEnd()
+
+        }
+    </script>
+</body>
+
+</html>
