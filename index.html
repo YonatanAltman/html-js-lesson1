@@ -1,61 +1,31 @@
-<html>
-<title>Lesson1 - html</title>
-
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="index.css">
 <head>
-    <style>
-        .my-form {
-            outline: solid black 2px;
-            background-color: aquamarine;
-
-        }
-
-     
-    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
 </head>
 
 <body>
-    <h2>
+    <h1>
         Academka
-    </h2>
+    </h1>
     <div>
-        <h3>
-            This is my Form
 
-        </h3>
-        <form id="employee-form" onsubmit="go()" class="my-form">
-            <div>
-                First Name
-                <input class="input" id="fname" type="text">
-            </div>
-            <div>
-                Last Name
-                <input class="input" id="lname" type="text">
-            </div>
-            <div>
-                Age
-                <input class="input" id="age" type="number">
-            </div>
-            <button>Submit</button>
-        </form>
+        <input id="field1" type="number" value="3">
     </div>
-    <script>
-        document.getElementById("employee-form").addEventListener("submit", function (event) {
+    <div>
 
-            event.preventDefault()
+        <input id="field2" type="number" value="">
+    </div>
+    <div class="action">
 
-        });
-        function go() {
-            console.group('FORM')
-            var from = {};
-            from.fname = document.getElementById('fname').value;
-            from.lname = document.getElementById('lname').value;
-            from.age = document.getElementById('age').value;
-            console.log(from);
+        <button id="btn" class="calc">Calc</button>
+    </div>
 
-            console.groupEnd()
-
-        }
-    </script>
+    <script src="index.js"></script>
 </body>
 
 </html>
